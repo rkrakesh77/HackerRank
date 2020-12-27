@@ -2,7 +2,7 @@ package Interview.RecursionAndBacktracking;
 
 import java.util.*;
 
-public class Solution {
+public class FibonnacciUsingRecursion {
 
     public static int fibonacci(int n) {
         if (n == 0) {
