@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class SuperDigits {
+public class RecursiveDigitSum {
 
     // Complete the superDigit function below.
     static int superDigit(String number, int k) {
@@ -19,32 +19,20 @@ public class SuperDigits {
             {
                 sum += Character.getNumericValue(number.charAt(i));
             }
+            System.out.println(sum);
             return superDigit(Long.toString(sum * k), 1);
         }
         else
             return Character.getNumericValue(number.charAt(0));
-
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        String[] nk = scanner.nextLine().split(" ");
-
-        String n = nk[0];
-
-        int k = Integer.parseInt(nk[1]);
-
+        String n =scanner.next();
+        int k = scanner.nextInt();
         int result = superDigit(n, k);
-
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
-
+        System.out.println(result);
         scanner.close();
     }
 }
