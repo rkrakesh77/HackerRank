@@ -6,14 +6,6 @@ public class OneDArrayMedium {
 
     public static boolean canWin(int leap, int[] game) {
         // Return true if you can win the game; otherwise, return false.
-        for (int i = 0; i <game.length-1 ; i++) {
-            if (game[i+1]==0){
-                if (i+1+leap> game.length)
-                    return true;
-            }
-            else
-                return false;
-        }
         return true;
     }
 
