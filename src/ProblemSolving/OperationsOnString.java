@@ -7,6 +7,7 @@ public class OperationsOnString {
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
 //       A=And Operation B=OR Operation C=XOR Operation
+        //1A2B3C5A8
         System.out.println(new OperationsOnString().BitOperationOnString(input));
     }
 
